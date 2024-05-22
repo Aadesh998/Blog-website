@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% load static %}
+{% block content %}
+<main class="home">
+  <div class="homeleft">
+    <div class="lefth">
+      <div class="lefto">
+        <h1>Article By Aadesh</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illum omnis reprehenderit voluptatum
+          recusandae, quisquam ipsam iste libero non est. Sint dolores quasi commodi dicta modi nulla eligendi nihil
+          cumque.</p>
+      </div>
+    </div>
+  </div>
+  <div class="homeright">
+    <div class="righth">
+      <div class="immg"></div>
+    </div>
+  </div>
+</main>
+
+
+<div class="container">
+  <h1>Coding Article</h1>
+  {% for Posts in Postblog %}
+    <div class="card-body">
+      <div class="left-side">
+        <p class="card-text"><small class="text-muted"> {{Posts.date}} </small></p>
+        <h2 class="card-title">{{Posts.Title}}</h2>
+      </div>
+      <div class="right-side">
+        <p class="card-text">{{Posts.Desc | safe | truncatechars:500 }}</p>
+        <div class="buttons">
+          <a href="/{{Posts.slug}}" class="btn btn-primary">Read Post</a>
+          <!-- <a href="/delete/{{Posts.id}}" class="btn1"><box-icon type='solid' name='message-alt-x'></box-icon></a> -->
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="loadmore">
+  <button type="button" id="loadmore" class="btn btn-primary">Load more</button>
+  <!-- <a href="">button </a> -->
+</div>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#loadmore').on('click', function () {
+      var currentIndex = $(".card-body").length;
+      console.log(currentIndex)
+      $.ajax({
+        url: "{% url 'loadmore' %}",
+        type: "post",
+        data: {
+          'offset': currentIndex,
+        },
+        // dataType:'json',
+        beforeSend: function () {
+          console.log("he")
+          $('#loadmore').addClass('disabled').text('Loading...');
+          console.log("hello")
+
+        },
+        success: function (res) {
+          // console.log("he")
+          console.log(res.totalresult)
+          console.log(res)
+          var html = '';
+          var json_data = $.parseJSON(res.posts);
+          console.log(json_data)
+          $.each(json_data, function (index, data) {
+            html +=
+              `
+            <div class="card-body">
+      <div class="left-side">
+        <p class="card-text"><small class="text-muted"> ${new Date(data.fields.date)} </small></p>
+        <h2 class="card-title"><a href="/${data.fields.slug}" class="btn btn-primary">${data.fields.Title}</a></h2>
+      </div>
+      <div class="right-side">
+        <p class="card-text">${data.fields.Desc.slice(0, 500)}</p>
+        <div class="buttons">
+                    
+        </div>
+      </div>
+    </div>
+            `
+          });
+          $(".container").append(html);
+          var countotal = $(".card-body").length;
+          console.log(countotal)
+          if (countotal == res.totalresult) {
+            $('#loadmore').remove();
+          } else {
+            $('#loadmore').addClass('disabled').text('Load more');
+
+          }
+          console.log('succdcess');
+        }
+      })
+    })
+  })
+</script>
+
+{% endblock content %}

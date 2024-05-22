@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background: #fef9f8;
+}
+
+.contact_us{
+    font-weight: 500;
+    margin: 10px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inputfrom{
+    height: 30px;
+    border: 1px solid #000100;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.textarea{
+    border-radius: 5px;
+    border: 1px solid #000100;
+    font-size: 15px;
+    padding: 10px;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 10px;
+    width: 100%;
+    background: #ef9273;
+}
+nav{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    height: 60px;
+    background: #fef9f8;
+}
+nav .leftnav ul{
+    display: flex;
+}
+nav .leftnav li {
+    list-style: none;
+}
+nav .leftnav li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: black;
+    padding-right: 15px;
+    /* transition: .3s ease; */
+    font-size: 20px;
+}
+nav .leftnav li .Home{
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* font-weight: 300; */
+    color: black;
+    padding-right: 15px;
+    /* transition: .3s ease; */
+}
+nav .leftnav li a:hover{
+    color: #242a24;
+    opacity: .8;   
+}
+.brandnav a{
+    text-decoration: none;
+    color: #000100;
+    font-size: 40px;
+    top: -19px;
+    position: relative;
+    font-weight: 500;
+}
+.rightnav{
+    display: flex;
+    top: 10px;
+    position: relative;
+    left: -13px;
+}
+.rightnav li{
+    list-style: none;
+}
+.rightnav li a{
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #000100;
+    text-transform: capitalize;
+    top: 5px;
+    position: relative;
+    font-size: 18px;
+}
+.search{
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    /* width: 100px; */
+    border-bottom: 1px solid #000100;
+    font-size: 20px;
+    background: #fef9f8;
+    opacity: .8;
+    font-weight: 200;
+
+}
+
+.submit{
+    outline: none;
+    border: none;
+    padding: 7px;
+    font-size: 20px;
+    /* font-weight: 500; */
+    opacity: .9;
+    border-radius: 5px;
+    text-transform: capitalize;
+    background-color: #ff8157;
+    padding-right: 10px;
+    font-weight: 200;
+}
+.submit:hover{
+    background-color: #ffc2ae;
+    /* opacity: .8; */
+}
+@media(max-width : 600px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    body{
+        flex-direction: column;
+    }
+}

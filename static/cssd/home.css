@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background: #fef9f8;
+}
+.home{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.homeleft{
+    min-width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.homeright{
+    min-width: 50%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.lefth{
+    bottom: 0;
+    width: 80%;
+    margin: auto;
+    /* background: #7d2626; */
+    padding: 20px;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 5px 10px #001000;
+}
+.lefto{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    line-height: 30px;
+    /* margin-top: 40px; */
+}
+.righth{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding: 20px;
+    /* background: #001000; */
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.immg{
+    width: 60%;
+    height: 350px;
+    background-color: rgb(252, 156, 156);
+    position: relative;
+    
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, .7);
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.loadmore{
+    width: 80%;
+    margin: auto;
+}
+.card-body{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.left-side{
+    width: 40%;
+    min-width: 30%;
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    /* columns: #fff; */
+}
+.card-title{
+    position: relative;
+    top: -14px;
+}
+.card-text{
+    line-height: 30px;
+    /* color: #fff; */
+}
+.btn{
+    text-decoration: none;
+    /* background: blue; */
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    outline: none;
+    border: none;
+}
+.btn1{
+    text-decoration: none;
+    /* background: blue; */
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    outline: none;
+    border: none;
+}
+.btn-primary{
+    background: blue;
+}
+.btn-danger{
+    background: red;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+.container1{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    padding-bottom: 20px;
+}
+.size1{
+    width: 60%;
+    /* border: 1px solid #000100; */
+}
+.size2{
+    width: 1px;
+    height: 480px;
+    background: #000100;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.size3{
+    /* margin: auto; */
+    /* border: 1px solid #000100; */
+    width: 40%;
+    /* height: calc(500/3); */
+}
+.size1 .loop1{
+    padding: 10px;
+    padding-bottom: 15px;
+    box-shadow: 1px 0px 5px 0px #000100;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.card-title1{
+    margin-top: 0;
+}
+.card-title2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.card-text1{
+    margin-bottom: 0;
+}
+.link2{
+    margin-top: 0;
+    text-decoration: none;
+    color: #000100;
+}
+.card-text2 a{
+    /* margin-top: 0; */
+    text-decoration: none;
+    color: #000100;
+}
+.loop2{
+    border-radius: 10px;
+    box-shadow: 5px 5px #000100;
+    /* border: 1px solid #000100; */
+    margin-bottom: 10px;
+    height: 110px;
+    padding: 10px;
+}
+.boxo{
+    border: 1px solid #000100;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.Sign{
+    margin-top: 0;
+    margin-bottom: 0;
+}

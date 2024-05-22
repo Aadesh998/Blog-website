@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Login : page{% endblock %}
+{% block content %}
+
+<div class="container boxo">
+    <h2 class="Sign">Sign Up</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">First Name</label>
+            <input type="text" name="firstname" class="form-control inputfrom" id="firstname" placeholder="First name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Last Name</label>
+            <input type="text" class="form-control inputfrom" id="lastname" name="lastname" placeholder="Last name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Username</label>
+            <input type="text" class="form-control inputfrom" name="username" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control inputfrom" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control inputfrom" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control inputfrom" name="confirmpass" id="exampleInputPassword1" placeholder="Confirm Password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <a href="/login/">login</a>
+
+</div>
+{% endblock %}
